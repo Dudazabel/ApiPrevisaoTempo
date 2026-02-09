@@ -8,66 +8,61 @@
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
    
 </head>
-    <body class="bg-[#9dd3fe]">
+    <body class="bg-[#9dd3fe] font-[Plus_Jakarta_Sans]">
         <header>
                 <div class="flex justify-center">
-                    <img src="imagens/sunny-day.png" alt="Logo do site" class="pt-8 pr-2 pb-8 pl-6">
-                    <h1 class="text-2xl font-[Plus_Jakarta_Sans] pt-8 pr-4 pb-8 pl-0 text-white">Previsão do Tempo </h1>
+                    <img src="imagens/sunny-day.png" alt="Logo do site" class="pt-8 pr-1 pb-8 pl-6">
+                    <h1 class="text-2xl pt-8 pb-8 text-white">Previsão do Tempo </h1>
                 </div>
         </header>
         <main>
-            <section class="busca"> 
+            <section> 
                 <div class="flex justify-center">
                     <div class="flex bg-[#C8E8FF] rounded-xl mr-1 ml-3 pt-3 pr-10 pl-3 pb-3">
                         <div class="mr-3">
                             <img src="imagens/search.png" alt="Ícone da lupa">
                         </div>
                         <div class="text-white">
-                            <input id="cidade" type="text" placeholder="Buscar cidade...">
+                            <input id="cidadeInput" type="text" placeholder="Buscar cidade...">
                         </div>
                     </div>
                     <div class="bg-[#66B2FF] rounded-xl mr-3 pt-3 pr-3 pl-3 pb-3 text-white">
-                        <button>Buscar</button>
+                        <button onclick="buscarClima()">Buscar</button>
                     </div>
                 </div>
             </section>
-            <section class="visualizar">
-                <div class="topoPagina">
-                    <div class="informacoesVisualizar">
-                        <div class="cidadeEstado">
-                            <div class="estado">
-                                <p>Estado,</p>
+            <section>
+                <div class="bg-[#C8E8FF] mt-6 mr-3 ml-3 rounded-xl justify-center">
+                    <div>
+                        <div class="pr-4 pl-2 pt-6 text-white text-xl flex">
+                            <div class="pr-1">
+                                <p>Santa Catarina,</p>
                             </div>
-                            <div class="cidade">
-                                <p>Cidade</p>
+                            <div>
+                                <p>Jaraguá do Sul</p>
                             </div>
                         </div>
-                        <div class="dia">
+                        <div class="text-[#F8F9FA] text-[16px] flex pl-2">
                             <div class="diaSemana">
-                                <p>Dia da semana,</p>
+                                <p>Segunda-Feira,</p>
                             </div>
-                            <div class="diaMes">
-                                <p>Dia do Mes</p>
+                            <div class="flex">
+                                <div class="diaNumero">
+                                    <p>09 De</p>
+                                </div>
+                                <div class="mesExtenso">
+                                    <p>Fevereiro</p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="botoesVisualizar">
-                        <div class="botaoEstatisticas">
-                            <a href="">Estatisticas</a>
-                        </div>
-                        <div class="botaoCompartilhar">
-                            <a href="">Compartilhar</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="meioPagina">
                     <div class="comoEstaDia">
                         <div class="primeiraParte">
                             <div class="comoEstaCeu">
                                 <p>Imagem de Nuvem como está o céu</p>
                             </div>
                             <div class="temperatura">
-                                <p>Graus</p>
+                                <p id="tempAtual">-</p>
                             </div>
                         </div>
                         <div class="segundaParte">
@@ -106,5 +101,6 @@
                 </div>
             </section>
         </main>
+        <script src="script.js"></script>
     </body>
 </html>
